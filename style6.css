@@ -1,0 +1,33 @@
+.block1{
+    z-index: 5;
+    left: 100px;
+    height: 150px;
+}
+.block2{
+    z-index: 10;
+    left:50px;
+    top: 50px;
+    height: 150px;
+}
+.block3{
+    z-index: 15;
+    left:300px;
+    top:100px
+}
+.block4{
+    z-index: 30;
+    right:30px;
+    top: 150px;
+}
+div{
+    position: absolute;
+}
+div:hover{
+    z-index: 100;
+}
+img{
+    opacity: 0.3;
+}
+img:hover{
+    opacity: 1;cursor: pointer;;
+}

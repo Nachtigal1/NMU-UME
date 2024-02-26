@@ -1,0 +1,262 @@
+.zagolovok {
+    padding: 20px 0;
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: 'Lora', serif
+}
+
+.header {
+    background-color: olive;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url(img/камуфляж.jpg);
+}
+
+.osnova {
+    width: 1100px;
+    background-color: wheat;
+    margin: 0 auto;
+    font-size: 24px;
+    text-align: center;
+}
+.osnova3 {
+    width: 1200px;
+    background-color: wheat;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+.flag {
+    width: 160px;
+    transition: box-shadow 1s ease 0s;
+    box-shadow: none;
+    border-radius: 90px;
+
+}
+
+.flag-user {
+    width: 90px;
+    transition: box-shadow 1s ease 0s;
+    box-shadow: none;
+    border-radius: 90px;
+
+}
+
+.main-item {
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+
+}
+
+.main-items {
+    opacity: 0;
+    transition: all 1s ease 0s;
+}
+
+.main-items.active {
+    opacity: 1;
+}
+
+.main-items1 {
+    opacity: 0;
+    transition: all 1s ease 0s;
+}
+
+.main-items1.active {
+    opacity: 1;
+}
+
+.main-items2 {
+    opacity: 0;
+    transition: all 1s ease 0s;
+}
+
+.main-items2.active {
+    opacity: 1;
+}
+
+.knopka {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.zagolovok1 {
+    margin-bottom: 50px;
+}
+
+.main-item span {
+    margin-left: 15px;
+
+}
+
+.flag:hover {
+    box-shadow: 0 0 20px black;
+}
+
+.main {
+    margin: 0 auto;
+    justify-content: center;
+    display: block;
+}
+
+.footer {
+    background-color: olive;
+
+}
+
+.register {
+    justify-content: right;
+}
+
+form {
+    display: inline-block;
+}
+
+.kontakt {
+    margin-left: auto;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.podval {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.osnova2 {
+
+    width: 1500px;
+    background-color: wheat;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+.flag1 {
+    width: 375px;
+    height: 250px;
+    margin-right: 10px;
+}
+
+
+
+.flag-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.termin {
+    font-weight: bold;
+}
+.termin1{
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+
+}
+
+.flag-item span {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.perehod {
+    float: right;
+}
+
+.svecha {
+
+    height: 350px;
+}
+
+.nadpis {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+}
+
+.jiv {
+    text-align: left;
+    margin-top: 20px;
+    text-decoration: none;
+
+
+}
+
+.exit {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tanki {
+    display: none;
+    margin: 0 auto;
+    height: 150px;
+}
+
+.link:hover .tanki {
+    display: block;
+}
+.text{
+    text-align: center;
+}
+.kartinka{
+    width: 350px;
+    float: left;
+}
+
+.layer{
+    width: 300px;
+    background-color: rgb(255, 113, 66);
+    border-style: solid;
+    border-color: rgb(1, 0, 88);
+    border-width: 3px;
+    color: rgb(0, 255, 119);
+    clip: rect(40px, auto, auto, 40px);
+    position: absolute; top: 10px;
+    margin-bottom: 25px;
+}
+.layer2{
+    width: 400px;
+    height: 400px;
+    border-style: solid;
+    border-color: rgb(88, 79, 0);
+    border-width: 3px;
+    border-radius: 10px;
+    overflow: scroll;
+    margin-left: 290px;
+}
+*::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgb(152, 151, 69);
+    border-radius: 15px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 247, 0);
+    border-radius: 20px;
+    border: 1px solid rgb(112, 126, 67);
+  }
+table, th, td {
+    border:1px solid black;
+}
