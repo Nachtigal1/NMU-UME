@@ -59,7 +59,7 @@
                                     </table>
             </div>
             <div class="exit">
-                <a href="Main.html">На головну
+                <a href="Main.php">На головну
 
                 </a>
             </div>

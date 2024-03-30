@@ -1,25 +1,27 @@
 <?php
+global $conn;
+session_start();
+require('utils/db.php');
+
 $error_message = '';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'] ?? '';
     $password = $_POST['password'] ?? '';
     $email = $_POST['email'] ?? '';
-    $day = $_POST['day'] ?? '';
-    $month = $_POST['month'] ?? '';
-    $year = $_POST['year'] ?? '';
-    $gender = $_POST['gender'] ?? '';
-    $spam = isset($_POST['spam']) ? "Так" : "Ні";
-    $comments = $_POST['comments'] ?? '';
-    $avatar = $_FILES['avatar']['name'] ?? '';
+    if (!empty($name) && !empty($password) && !empty($email)) {
+        $insert_query = "INSERT INTO users (name, password, email) 
+                         VALUES ('$name', '$password', '$email')";
 
-    if (!empty($name) && !empty($password) && !empty($email) && !empty($day) && !empty($month) && !empty($year) && !empty($gender)) {
-        header("Location: Main.html?success=true");
-        exit;
-    } else {
-        $error_message = "Ошибка: Некоторые данные отсутствуют. Пожалуйста, заполните все обязательные поля.";
+        if ($conn->query($insert_query) === TRUE) {
+            $_SESSION['login'] = $name;
+            header("Location: Main.php?success=true&name=" . urlencode($name));
+            exit;
+        } else {
+            $error_message = "Помилка при реєстрації користувача: " . $conn->error;
+        }
     }
-}
+
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div>
                 <p>Ваше ім'я:</p>
                 <label>
-                    <input name="name" type="text" size="20" value="Іван" required/>
+                    <input name="name" type="text" size="20"  required/>
                 </label>
             </div>
             <div>
@@ -120,14 +122,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <textarea name="comments" rows="6" cols="30"> </textarea>
                 </div>
             </div>
-            <div>
-                <p align="left">Аватарка</p>
-                <input name="avatar" type="file" size="20" />
-            </div>
             <button type="submit">Подача запита</button>
             <button type="reset">Скинути</button>
             <div class="exit">
-                <a href="Main.html" style="margin: 0 auto;">На головну</a>
+                <a href="Main.php" style="margin: 0 auto;">На головну</a>
             </div>
             <?php if (!empty($error_message)) : ?>
                 <p style="color: red;"><?php echo $error_message; ?></p>
